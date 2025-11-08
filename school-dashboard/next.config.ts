@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
   reactStrictMode: false, // Disable to prevent double execution in development
+  
+  // Ensure Next.js knows the correct root directory
+  outputFileTracingRoot: path.join(__dirname),
   
   // Build configuration
   typescript: {
